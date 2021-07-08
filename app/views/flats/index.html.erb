@@ -1,0 +1,11 @@
+<h1>Welcome to my lame Airbnb</h1>
+<p>All the flats are ugly</p>
+
+<ul>
+  <% @flats.each do |flat| %>
+    <li>
+      <%= link_to flat["name"], flat_path(flat["id"]) %>
+      - <%= flat["price"] %>€
+    </li>
+  <% end %>
+</ul>
